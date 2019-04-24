@@ -7,10 +7,10 @@ var _node = global.__jukebox_names[? _name ];
 
 repeat(ds_list_size(global.__jukebox_stack)) _string += "    ";
 _string += "\"" + _name + "\": "
-        +  (_node[ JUKEBOX.MUTE_INHERITED ]? "[M] " : "")
+        +  (_node[ JUKEBOX.MUTE ]? "[M] " : "")
         +  "trim=" + string_format(_node[ JUKEBOX.TRIM ], 1, 2)
         +  ", fade="+ string_format(_node[ JUKEBOX.GAIN ], 1, 2)
-        +  ", final=" + string_format(_node[ JUKEBOX.GAIN_INHERITED ], 1, 2)
+        +  ",   final=" + string_format(_node[ JUKEBOX.GAIN_INHERITED ], 1, 2)
         +  "\n";
 
 ds_list_add(global.__jukebox_stack, 0);
@@ -31,6 +31,7 @@ repeat(999)
     var _index = global.__jukebox_stack[| 0];
     if (_index >= array_length_1d(_children))
     {
+        if (_index > 0) _string += "\n";
         _name = _node[ JUKEBOX.PARENT ];
         ds_list_delete(global.__jukebox_stack, 0);
         continue;
@@ -56,10 +57,14 @@ repeat(999)
     if (_node[JUKEBOX.TYPE] == __JUKEBOX_TYPE_AUDIO)
     {
         _string += "\"" + _name + "\": "
-                +  (_node[ JUKEBOX.MUTE_INHERITED ]? "[M] " : "")
+                +  (_node[ JUKEBOX.MUTE ]? "[M] " : "")
                 +  "trim=" + string_format(_node[ JUKEBOX.TRIM ], 1, 2)
                 +  ", fade=" +  string_format(_node[ JUKEBOX.GAIN ], 1, 2)
-                +  ", final=" +  string_format(_node[ JUKEBOX.GAIN_INHERITED ], 1, 2)
+                +  ",   weight factor=" + string_format(_node[ JUKEBOX.WEIGHT_FACTOR ], 1, 2)
+                +  ", weight=" + string_format(_node[ JUKEBOX.WEIGHT ], 1, 2)
+                +  ", max weight=" + string_format(_node[ JUKEBOX.WEIGHT_MAX ], 1, 2)
+                +  ", weight gain=" + string_format(_node[ JUKEBOX.WEIGHT_GAIN ], 1, 2)
+                +  ",   final=" +  string_format(_node[ JUKEBOX.GAIN_INHERITED ], 1, 2)
                 +  ", \"" + string(audio_get_name(_node[ JUKEBOX.AUDIO ]))
                 +  "\"" + (_node[ JUKEBOX.LOOP ]? " [L]" : "")
                 +  " -> " + string_format(_node[ JUKEBOX.TIME_REMAINING ], 6, 0)
@@ -70,10 +75,14 @@ repeat(999)
     else
     {
         _string += "\"" + _name + "\": "
-                +  (_node[ JUKEBOX.MUTE_INHERITED ]? "[M] " : "")
+                +  (_node[ JUKEBOX.MUTE ]? "[M] " : "")
                 +  "trim=" + string_format(_node[ JUKEBOX.TRIM ], 1, 2)
                 +  ", fade=" +  string_format(_node[ JUKEBOX.GAIN ], 1, 2)
-                +  ", final=" +  string_format(_node[ JUKEBOX.GAIN_INHERITED ], 1, 2)
+                +  ",   weight factor=" + string_format(_node[ JUKEBOX.WEIGHT_FACTOR ], 1, 2)
+                +  ", weight=" + string_format(_node[ JUKEBOX.WEIGHT ], 1, 2)
+                +  ", max weight=" + string_format(_node[ JUKEBOX.WEIGHT_MAX ], 1, 2)
+                +  ", weight gain=" + string_format(_node[ JUKEBOX.WEIGHT_GAIN ], 1, 2)
+                +  ",   final=" +  string_format(_node[ JUKEBOX.GAIN_INHERITED ], 1, 2)
                 +  "\n";
     }
     

@@ -1,8 +1,8 @@
 {
-    "id": "52fb46d1-043d-4471-b565-f6c910be3fc0",
+    "id": "d1633306-80dc-47e1-ab00-30618e5062e8",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "jukebox_mute_set",
+    "name": "jukebox_set_unique_trim",
     "IsCompatibility": false,
     "IsDnD": false
 }

@@ -77,9 +77,6 @@ var _node = array_create(JUKEBOX.__SIZE);
 _node[@ JUKEBOX.GAIN             ] = _gain;
 _node[@ JUKEBOX.GAIN_INHERITED   ] = _resultant_gain;
 
-_node[@ JUKEBOX.TRIM             ] = _trim;
-_node[@ JUKEBOX.TRIM_TARGET      ] = _trim;
-
 _node[@ JUKEBOX.AUDIO            ] = -1;
 _node[@ JUKEBOX.INSTANCE         ] = -1;
 _node[@ JUKEBOX.TIME_REMAINING   ] =  0;
@@ -91,8 +88,14 @@ _node[@ JUKEBOX.FADE_TARGET_GAIN ] = _gain;
 _node[@ JUKEBOX.DESTROY_AT_ZERO  ] = _destroy_at_zero;
 
 _node[@ JUKEBOX.MUTE             ] = false;
-_node[@ JUKEBOX.MUTE_INHERITED   ] = _mute? 0.0 : 1.0;
 _node[@ JUKEBOX.MUTE_GAIN        ] = _mute? 0.0 : 1.0;
+
+_node[@ JUKEBOX.TRIM             ] = _trim;
+_node[@ JUKEBOX.TRIM_TARGET      ] = _trim;
+
+_node[@ JUKEBOX.WEIGHT_FACTOR    ] = 1;
+_node[@ JUKEBOX.WEIGHT           ] = 1;
+_node[@ JUKEBOX.WEIGHT_MAX       ] = -1;
 
 _node[@ JUKEBOX.NAME             ] = _name;
 _node[@ JUKEBOX.PARENT           ] = _parent;

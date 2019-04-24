@@ -63,9 +63,8 @@ if (_name == undefined)
 
 
 var _parent_array = global.__jukebox_names[? _parent ];
-var _mute        = _parent_array[ JUKEBOX.MUTE ];
-var _children    = _parent_array[ JUKEBOX.CHILDREN ];
-var _parent_gain = _parent_array[ JUKEBOX.GAIN ];
+var _mute     = _parent_array[ JUKEBOX.MUTE ];
+var _children = _parent_array[ JUKEBOX.CHILDREN ];
 if (_priority == undefined) _priority = _parent_array[ JUKEBOX.PRIORITY ];
 
 
@@ -85,25 +84,19 @@ else
 
 var _trim = global.__jukebox_trim[? _sound ];
     _trim = (_trim == undefined)? 1 : _trim;
-var _resultant_gain = _trim*_gain*_parent_gain;
-
-var _instance = audio_play_sound(_sound, _priority, _loop);
-audio_sound_gain(_instance, _mute? 0 : _resultant_gain, 0);
-if (JUKEBOX_DEBUG) show_debug_message("Jukebox: Playing \"" + string(audio_get_name(_sound)) + "\"" + (_loop? " (looped)" : "") + " on node \"" + _name + "\", child of \"" + string(_parent) + "\"");
 
 
+
+if (JUKEBOX_DEBUG) show_debug_message("Jukebox: Preparing \"" + string(audio_get_name(_sound)) + "\"" + (_loop? " (looped)" : "") + " for playback on node \"" + _name + "\", child of \"" + string(_parent) + "\"");
 
 var _node = array_create(JUKEBOX.__SIZE);
 _node[@ JUKEBOX.GAIN             ] = _gain;
-_node[@ JUKEBOX.GAIN_INHERITED   ] = _resultant_gain;
-
-_node[@ JUKEBOX.TRIM             ] = _trim;
-_node[@ JUKEBOX.TRIM_TARGET      ] = _trim;
+_node[@ JUKEBOX.GAIN_INHERITED   ] = undefined;
 
 _node[@ JUKEBOX.AUDIO            ] = _sound;
 _node[@ JUKEBOX.LOOP             ] = _loop;
-_node[@ JUKEBOX.INSTANCE         ] = _instance;
-_node[@ JUKEBOX.TIME_REMAINING   ] = audio_sound_length(_instance)*1000;
+_node[@ JUKEBOX.INSTANCE         ] = undefined;
+_node[@ JUKEBOX.TIME_REMAINING   ] = 0;
 _node[@ JUKEBOX.QUEUED_AUDIO     ] = _loop? _sound : -1;
 _node[@ JUKEBOX.QUEUED_LOOP      ] = _loop;
 
@@ -112,8 +105,14 @@ _node[@ JUKEBOX.FADE_TARGET_GAIN ] = _gain;
 _node[@ JUKEBOX.DESTROY_AT_ZERO  ] = _destroy_at_zero
 
 _node[@ JUKEBOX.MUTE             ] = false;
-_node[@ JUKEBOX.MUTE_INHERITED   ] = _mute? 0.0 : 1.0;
 _node[@ JUKEBOX.MUTE_GAIN        ] = _mute? 0.0 : 1.0;
+
+_node[@ JUKEBOX.TRIM             ] = _trim;
+_node[@ JUKEBOX.TRIM_TARGET      ] = _trim;
+
+_node[@ JUKEBOX.WEIGHT_FACTOR    ] = 1;
+_node[@ JUKEBOX.WEIGHT           ] = _gain;
+_node[@ JUKEBOX.WEIGHT_MAX       ] = -1;
 
 _node[@ JUKEBOX.NAME             ] = _name;
 _node[@ JUKEBOX.PARENT           ] = _parent;

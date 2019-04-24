@@ -7,11 +7,10 @@
         "c0751370-035d-4071-b27d-5fbadeb030e2",
         "a2466029-777d-4729-819f-1aff1b933d57",
         "52fb46d1-043d-4471-b565-f6c910be3fc0",
-        "e38e8810-8c68-4924-8489-47762cd55179",
-        "18b534a0-93bd-4cbb-a8e1-c0ca3f40ff92"
+        "e38e8810-8c68-4924-8489-47762cd55179"
     ],
     "filterType": "GMScript",
-    "folderName": "Queue, Fade, Mute, Trim",
+    "folderName": "Queue, Fade, Mute",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

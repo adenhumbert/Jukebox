@@ -119,6 +119,14 @@
             }
         },
         {
+            "Key": "1cfdab83-ae96-4538-8b74-5108d0c89e05",
+            "Value": {
+                "id": "54560e2e-84d1-4ae2-a8e5-ed05b66ed64a",
+                "resourcePath": "sounds\\sndStem1\\sndStem1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "25a5f155-de69-453f-b495-6e230e28fc1c",
             "Value": {
                 "id": "a396c8ae-6227-4c12-9597-64b061d36e24",
@@ -207,10 +215,18 @@
             }
         },
         {
+            "Key": "4fe6c106-749f-40da-a2f1-91f543668ab2",
+            "Value": {
+                "id": "ab4b8e1e-3e67-4e74-958b-ce50727bfad4",
+                "resourcePath": "views\\4fe6c106-749f-40da-a2f1-91f543668ab2.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "52fb46d1-043d-4471-b565-f6c910be3fc0",
             "Value": {
                 "id": "7c3a36d3-a8bc-4182-b172-01f7485f153e",
-                "resourcePath": "scripts\\jukebox_mute_set\\jukebox_mute_set.yy",
+                "resourcePath": "scripts\\jukebox_set_mute\\jukebox_set_mute.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -239,6 +255,14 @@
             }
         },
         {
+            "Key": "5d15faea-b91e-4205-b6db-42a74060c844",
+            "Value": {
+                "id": "9b23f2f2-536f-4b33-aec0-b60a7704b274",
+                "resourcePath": "fonts\\fDebug\\fDebug.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "61782230-26ed-4795-9594-c9165f779ca5",
             "Value": {
                 "id": "d1b381b2-d416-46c9-ac86-94df9a27baa4",
@@ -263,6 +287,14 @@
             }
         },
         {
+            "Key": "76f6214e-030f-4f7a-bbf7-7aaa70dc5723",
+            "Value": {
+                "id": "2a25defb-4d5d-4477-a258-e6805f738761",
+                "resourcePath": "scripts\\jukebox_set_weight_factor\\jukebox_set_weight_factor.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7c148d0c-73d5-4f34-9bef-fbffb233506b",
             "Value": {
                 "id": "e3a82755-197c-4082-9033-37d06c266916",
@@ -284,6 +316,14 @@
                 "id": "6b4d11da-8997-4a86-8775-7871b0dcc656",
                 "resourcePath": "options\\windowsuap\\options_windowsuap.yy",
                 "resourceType": "GMWindowsUAPOptions"
+            }
+        },
+        {
+            "Key": "84102ec2-65c5-40d8-89b7-6bbc76349bcf",
+            "Value": {
+                "id": "27b4a2ce-3ad3-4188-a86b-0696b7d30eda",
+                "resourcePath": "sounds\\sndStem4\\sndStem4.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -474,7 +514,7 @@
             "Key": "d1633306-80dc-47e1-ab00-30618e5062e8",
             "Value": {
                 "id": "da38a8b7-c042-4b94-8c95-146848151cbf",
-                "resourcePath": "scripts\\jukebox_set_trim\\jukebox_set_trim.yy",
+                "resourcePath": "scripts\\jukebox_set_unique_trim\\jukebox_set_unique_trim.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -483,6 +523,22 @@
             "Value": {
                 "id": "8f966f14-416a-409a-8ffe-a9984c6c7726",
                 "resourcePath": "scripts\\jukebox_audio_will_finish\\jukebox_audio_will_finish.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d9995559-1f37-4bf3-9185-2b87067ec96e",
+            "Value": {
+                "id": "607b184a-877e-4d35-9314-f5b45bf91f8a",
+                "resourcePath": "sounds\\sndStem3\\sndStem3.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "dbab9ed7-32dd-4194-8818-f2c7971f31fc",
+            "Value": {
+                "id": "65e8cbde-1b27-486a-abf3-9a74c73dcead",
+                "resourcePath": "scripts\\jukebox_set_max_weight\\jukebox_set_max_weight.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -498,8 +554,16 @@
             "Key": "e38e8810-8c68-4924-8489-47762cd55179",
             "Value": {
                 "id": "f3205693-b096-45f0-b8ba-ecdfce878a63",
-                "resourcePath": "scripts\\jukebox_mute_get\\jukebox_mute_get.yy",
+                "resourcePath": "scripts\\jukebox_get_mute\\jukebox_get_mute.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e3b4193d-d864-4531-97f3-7b3409008663",
+            "Value": {
+                "id": "4e507a54-a255-4c86-91b6-e50532ecf842",
+                "resourcePath": "sounds\\sndStem2\\sndStem2.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -560,6 +624,8 @@
         "e38e8810-8c68-4924-8489-47762cd55179",
         "18b534a0-93bd-4cbb-a8e1-c0ca3f40ff92",
         "d1633306-80dc-47e1-ab00-30618e5062e8",
+        "dbab9ed7-32dd-4194-8818-f2c7971f31fc",
+        "76f6214e-030f-4f7a-bbf7-7aaa70dc5723",
         "1830cd61-c1b7-43da-8b31-c309af2e4180",
         "f25d59e6-de85-46f7-9b89-95eeb17f4ce9",
         "d3309ad4-fafc-4623-8b72-fc7e9f22db63"
