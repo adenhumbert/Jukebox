@@ -149,7 +149,7 @@ for(var _i = _size-1; _i >= 0; _i--)
     
     var _weight_max = _node[ JUKEBOX.WEIGHT_MAX ];
     var _weight_gain = 1;
-    if ((_weight > 0) && (_weight_max >= 0)) _weight_gain = clamp(_weight_max / _weight, 0.0, 1.0);
+    if ((_weight > 0) && (_weight_max >= 0)) var _weight_gain = lerp(1.0, _weight_max / _weight, clamp(_node[ JUKEBOX.WEIGHT_RATIO ]*(_weight - _weight_max), 0.0, 1.0));
     _node[@ JUKEBOX.WEIGHT_GAIN ] = _weight_gain;
     
     _parent_node[@ JUKEBOX.WEIGHT ] += _weight_gain*_weight;

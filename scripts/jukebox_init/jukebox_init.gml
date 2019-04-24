@@ -44,15 +44,16 @@ enum JUKEBOX
     WEIGHT_FACTOR,    //15
     WEIGHT,           //16
     WEIGHT_MAX,       //17
-    WEIGHT_GAIN,      //18
+    WEIGHT_RATIO,     //18
+    WEIGHT_GAIN,      //19
     
-    NAME,             //19
-    PARENT,           //20
-    TYPE,             //21
-    PRIORITY,         //22
-    CHILDREN,         //23
-    __INDEX,          //24
-    __SIZE            //25
+    NAME,             //20
+    PARENT,           //21
+    TYPE,             //22
+    PRIORITY,         //23
+    CHILDREN,         //24
+    __INDEX,          //25
+    __SIZE            //26
 }
 
 global.__jukebox_master_name  = _name;
@@ -84,6 +85,7 @@ _node[@ JUKEBOX.TRIM_TARGET      ] = _trim;
 _node[@ JUKEBOX.WEIGHT_FACTOR    ] =  1;
 _node[@ JUKEBOX.WEIGHT           ] =  1;
 _node[@ JUKEBOX.WEIGHT_MAX       ] = -1;
+_node[@ JUKEBOX.WEIGHT_RATIO     ] =  1.0;
 _node[@ JUKEBOX.WEIGHT_GAIN      ] =  1;
 
 _node[@ JUKEBOX.NAME             ] = global.__jukebox_master_name;
