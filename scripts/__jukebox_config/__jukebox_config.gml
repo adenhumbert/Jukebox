@@ -1,4 +1,4 @@
-#macro JUKEBOX_MUTE_SPEED    12.0  //How quickly audio fades in/out when muted (gain/second)
+#macro JUKEBOX_MUTE_SPEED    18.0  //How quickly audio fades in/out when muted (gain/second)
 #macro JUKEBOX_TRIM_SPEED     5.0  //How quickly audio fades in/out when the trim is changed (gain/second)
 #macro JUKEBOX_WEIGHT_SPEED   5.0  //How quickly audio fades in/out when the weight of a node changes
 

@@ -53,37 +53,65 @@ repeat(999)
         continue;
     }
     
+    if (_node[ JUKEBOX.INSTANCE ] == undefined) continue;
+    
     repeat(ds_list_size(global.__jukebox_stack)) _string += "    ";
     if (_node[JUKEBOX.TYPE] == __JUKEBOX_TYPE_AUDIO)
     {
-        _string += "\"" + _name + "\": "
-                +  (_node[ JUKEBOX.MUTE ]? "[M] " : "")
-                +  "trim=" + string_format(_node[ JUKEBOX.TRIM ], 1, 2)
-                +  ", fade=" +  string_format(_node[ JUKEBOX.GAIN ], 1, 2)
-                +  ",   weight factor=" + string_format(_node[ JUKEBOX.WEIGHT_FACTOR ], 1, 2)
-                +  ", weight=" + string_format(_node[ JUKEBOX.WEIGHT ], 1, 2)
-                +  ", max weight=" + string_format(_node[ JUKEBOX.WEIGHT_MAX ], 1, 2)
-                +  ", weight gain=" + string_format(_node[ JUKEBOX.WEIGHT_GAIN ], 1, 2)
-                +  ",   final=" +  string_format(_node[ JUKEBOX.GAIN_INHERITED ], 1, 2)
-                +  ", \"" + string(audio_get_name(_node[ JUKEBOX.AUDIO ]))
-                +  "\"" + (_node[ JUKEBOX.LOOP ]? " [L]" : "")
-                +  " -> " + string_format(_node[ JUKEBOX.TIME_REMAINING ]/1000, 3, 2)
-                +  "s -> \"" + string(audio_get_name(_node[ JUKEBOX.QUEUED_AUDIO ]))
-                +  "\"" + (_node[ JUKEBOX.QUEUED_LOOP ]? " [L]" : "")
-                + "\n";
+        _string += "\"" + _name + "\": ";
+        _string += (_node[ JUKEBOX.MUTE ]? "[M] " : "");
+        _string += "trim=" + string_format(_node[ JUKEBOX.TRIM ], 1, 2);
+        _string += ", fade=" +  string_format(_node[ JUKEBOX.GAIN ], 1, 2);
+        
+        if (_node[ JUKEBOX.WEIGHT_FACTOR ] != 1.0)
+        {
+            _string += ",   weight factor=" + string_format(_node[ JUKEBOX.WEIGHT_FACTOR ], 1, 2);
+            _string += ", weight=" + string_format(_node[ JUKEBOX.WEIGHT ], 1, 2);
+        }
+        else
+        {
+            _string += ",   weight=" + string_format(_node[ JUKEBOX.WEIGHT ], 1, 2);
+        }
+        
+        if (_node[ JUKEBOX.WEIGHT_MAX ] >= 0)
+        {
+            _string += ", max weight=" + string_format(_node[ JUKEBOX.WEIGHT_MAX ], 1, 2);
+            _string += ", weight gain=" + string_format(_node[ JUKEBOX.WEIGHT_GAIN ], 1, 2);
+        }
+        
+        _string += ",   final=" +  string_format(_node[ JUKEBOX.GAIN_INHERITED ], 1, 2);
+        _string += ", \"" + string(audio_get_name(_node[ JUKEBOX.AUDIO ]));
+        _string += "\"" + (_node[ JUKEBOX.LOOP ]? " [L]" : "");
+        _string += " -> " + string_format(_node[ JUKEBOX.TIME_REMAINING ]/1000, 3, 2);
+        _string += "s -> \"" + string(audio_get_name(_node[ JUKEBOX.QUEUED_AUDIO ]));
+        _string += "\"" + (_node[ JUKEBOX.QUEUED_LOOP ]? " [L]" : "");
+        _string += "\n";
     }
     else
     {
-        _string += "\"" + _name + "\": "
-                +  (_node[ JUKEBOX.MUTE ]? "[M] " : "")
-                +  "trim=" + string_format(_node[ JUKEBOX.TRIM ], 1, 2)
-                +  ", fade=" +  string_format(_node[ JUKEBOX.GAIN ], 1, 2)
-                +  ",   weight factor=" + string_format(_node[ JUKEBOX.WEIGHT_FACTOR ], 1, 2)
-                +  ", weight=" + string_format(_node[ JUKEBOX.WEIGHT ], 1, 2)
-                +  ", max weight=" + string_format(_node[ JUKEBOX.WEIGHT_MAX ], 1, 2)
-                +  ", weight gain=" + string_format(_node[ JUKEBOX.WEIGHT_GAIN ], 1, 2)
-                +  ",   final=" +  string_format(_node[ JUKEBOX.GAIN_INHERITED ], 1, 2)
-                +  "\n";
+        _string += "\"" + _name + "\": ";
+        _string += (_node[ JUKEBOX.MUTE ]? "[M] " : "");
+        _string += "trim=" + string_format(_node[ JUKEBOX.TRIM ], 1, 2);
+        _string += ", fade=" +  string_format(_node[ JUKEBOX.GAIN ], 1, 2);
+        
+        if (_node[ JUKEBOX.WEIGHT_FACTOR ] != 1.0)
+        {
+            _string += ",   weight factor=" + string_format(_node[ JUKEBOX.WEIGHT_FACTOR ], 1, 2);
+            _string += ", weight=" + string_format(_node[ JUKEBOX.WEIGHT ], 1, 2);
+        }
+        else
+        {
+            _string += ",   weight=" + string_format(_node[ JUKEBOX.WEIGHT ], 1, 2);
+        }
+        
+        if (_node[ JUKEBOX.WEIGHT_MAX ] >= 0)
+        {
+            _string += ", max weight=" + string_format(_node[ JUKEBOX.WEIGHT_MAX ], 1, 2);
+            _string += ", weight gain=" + string_format(_node[ JUKEBOX.WEIGHT_GAIN ], 1, 2);
+        }
+        
+        _string += ",   final=" +  string_format(_node[ JUKEBOX.GAIN_INHERITED ], 1, 2);
+        _string += "\n";
     }
     
     ds_list_insert(global.__jukebox_stack, 0, 0);
