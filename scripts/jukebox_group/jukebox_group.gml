@@ -93,9 +93,10 @@ _node[@ JUKEBOX.MUTE_GAIN        ] = _mute? 0.0 : 1.0;
 _node[@ JUKEBOX.TRIM             ] = _trim;
 _node[@ JUKEBOX.TRIM_TARGET      ] = _trim;
 
-_node[@ JUKEBOX.WEIGHT_FACTOR    ] = 1;
-_node[@ JUKEBOX.WEIGHT           ] = 1;
+_node[@ JUKEBOX.WEIGHT_FACTOR    ] =  1;
+_node[@ JUKEBOX.WEIGHT           ] =  1;
 _node[@ JUKEBOX.WEIGHT_MAX       ] = -1;
+_node[@ JUKEBOX.WEIGHT_GAIN      ] =  1;
 
 _node[@ JUKEBOX.NAME             ] = _name;
 _node[@ JUKEBOX.PARENT           ] = _parent;

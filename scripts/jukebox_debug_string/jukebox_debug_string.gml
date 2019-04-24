@@ -67,8 +67,8 @@ repeat(999)
                 +  ",   final=" +  string_format(_node[ JUKEBOX.GAIN_INHERITED ], 1, 2)
                 +  ", \"" + string(audio_get_name(_node[ JUKEBOX.AUDIO ]))
                 +  "\"" + (_node[ JUKEBOX.LOOP ]? " [L]" : "")
-                +  " -> " + string_format(_node[ JUKEBOX.TIME_REMAINING ], 6, 0)
-                +  "ms -> \"" + string(audio_get_name(_node[ JUKEBOX.QUEUED_AUDIO ]))
+                +  " -> " + string_format(_node[ JUKEBOX.TIME_REMAINING ]/1000, 3, 2)
+                +  "s -> \"" + string(audio_get_name(_node[ JUKEBOX.QUEUED_AUDIO ]))
                 +  "\"" + (_node[ JUKEBOX.QUEUED_LOOP ]? " [L]" : "")
                 + "\n";
     }

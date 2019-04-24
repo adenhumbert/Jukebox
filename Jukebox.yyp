@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "138fdb19-f07d-4975-b93e-c57b4ef57af5",
+            "Value": {
+                "id": "4d199b99-adc4-4c7c-8ff5-3f165e810ada",
+                "resourcePath": "objects\\oExampleWeights\\oExampleWeights.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "17d7eb2a-d732-49d4-93b0-893c57334caa",
             "Value": {
                 "id": "94373b26-d9fb-41dc-92a3-c75ecc42aa50",
@@ -154,7 +162,7 @@
             "Key": "2ab84689-5663-4066-92ff-9bc37c13b541",
             "Value": {
                 "id": "74715d85-0f71-4a6a-9aec-838ab32e5e44",
-                "resourcePath": "rooms\\rMain\\rMain.yy",
+                "resourcePath": "rooms\\rExampleQueuingAndFading\\rExampleQueuingAndFading.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -375,6 +383,14 @@
             }
         },
         {
+            "Key": "9f8e1c3a-0966-44b3-84e3-28939178408e",
+            "Value": {
+                "id": "2ec4cc19-1472-447e-8712-351ce1b2f486",
+                "resourcePath": "objects\\oExampleCrossfading\\oExampleCrossfading.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a128950b-5063-4876-b4a6-b99dbd2ea6d1",
             "Value": {
                 "id": "e29952a5-b9b8-4545-89c6-2e4586bde885",
@@ -402,7 +418,7 @@
             "Key": "a62c924d-9a91-4f2e-99a9-a0d2a5142792",
             "Value": {
                 "id": "241ce1c3-a97a-405f-bc6e-b34954bb1f92",
-                "resourcePath": "objects\\oMain\\oMain.yy",
+                "resourcePath": "objects\\oExampleQueuingAndFading\\oExampleQueuingAndFading.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -412,6 +428,14 @@
                 "id": "330a023b-1b35-429a-a8e6-7cde0896a321",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "aa7286a3-ac1b-437b-8889-4dea1a8c6d86",
+            "Value": {
+                "id": "3af9cd9a-9bee-472e-b7d2-2c56648d875e",
+                "resourcePath": "rooms\\rExampleCrossfading\\rExampleCrossfading.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -548,6 +572,14 @@
                 "id": "d1df1722-1c66-4716-a604-32011f841e72",
                 "resourcePath": "views\\dc32b9bc-c916-48bc-b5f2-4597e5f3ba6a.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "dd0383b6-893f-48ce-a329-f95aaec94c09",
+            "Value": {
+                "id": "cbaa7f5b-31df-4865-8934-ef95c086a70d",
+                "resourcePath": "rooms\\rExampleWeights\\rExampleWeights.yy",
+                "resourceType": "GMRoom"
             }
         },
         {

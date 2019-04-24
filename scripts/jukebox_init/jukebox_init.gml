@@ -36,23 +36,23 @@ enum JUKEBOX
     DESTROY_AT_ZERO,  //10
     
     MUTE,             //11
-    MUTE_GAIN,        //13
+    MUTE_GAIN,        //12
     
-    TRIM,             //14
-    TRIM_TARGET,      //15
+    TRIM,             //13
+    TRIM_TARGET,      //14
     
-    WEIGHT_FACTOR,    //16
-    WEIGHT,           //17
-    WEIGHT_MAX,       //18
-    WEIGHT_GAIN,      //19
+    WEIGHT_FACTOR,    //15
+    WEIGHT,           //16
+    WEIGHT_MAX,       //17
+    WEIGHT_GAIN,      //18
     
-    NAME,             //20
-    PARENT,           //21
-    TYPE,             //22
-    PRIORITY,         //23
-    CHILDREN,         //24
-    __INDEX,          //25
-    __SIZE            //26
+    NAME,             //19
+    PARENT,           //20
+    TYPE,             //21
+    PRIORITY,         //22
+    CHILDREN,         //23
+    __INDEX,          //24
+    __SIZE            //25
 }
 
 global.__jukebox_master_name  = _name;
@@ -81,9 +81,10 @@ _node[@ JUKEBOX.MUTE_GAIN        ] = 1.0;
 _node[@ JUKEBOX.TRIM             ] = _trim;
 _node[@ JUKEBOX.TRIM_TARGET      ] = _trim;
 
-_node[@ JUKEBOX.WEIGHT_FACTOR    ] = 1;
-_node[@ JUKEBOX.WEIGHT           ] = 1;
+_node[@ JUKEBOX.WEIGHT_FACTOR    ] =  1;
+_node[@ JUKEBOX.WEIGHT           ] =  1;
 _node[@ JUKEBOX.WEIGHT_MAX       ] = -1;
+_node[@ JUKEBOX.WEIGHT_GAIN      ] =  1;
 
 _node[@ JUKEBOX.NAME             ] = global.__jukebox_master_name;
 _node[@ JUKEBOX.PARENT           ] = undefined;

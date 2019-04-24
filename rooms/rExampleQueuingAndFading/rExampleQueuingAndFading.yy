@@ -1,6 +1,6 @@
 
 {
-    "name": "rMain",
+    "name": "rExampleQueuingAndFading",
     "id": "2ab84689-5663-4066-92ff-9bc37c13b541",
     "creationCodeFile": "",
     "inheritCode": false,

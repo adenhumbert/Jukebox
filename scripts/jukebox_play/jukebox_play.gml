@@ -113,6 +113,7 @@ _node[@ JUKEBOX.TRIM_TARGET      ] = _trim;
 _node[@ JUKEBOX.WEIGHT_FACTOR    ] = 1;
 _node[@ JUKEBOX.WEIGHT           ] = _gain;
 _node[@ JUKEBOX.WEIGHT_MAX       ] = -1;
+_node[@ JUKEBOX.WEIGHT_GAIN      ] =  1;
 
 _node[@ JUKEBOX.NAME             ] = _name;
 _node[@ JUKEBOX.PARENT           ] = _parent;
