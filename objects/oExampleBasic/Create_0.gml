@@ -1,6 +1,6 @@
 jukebox_init("master", 1.0, 1.0, 10);
 
-jukebox_group("music", "master");
+jukebox_group("music", "master", 0.3); //Play audio at 30% volume if they're in this group
 jukebox_group("sfx", "master");
 
-jukebox_play(sndLoop1, "music", "loop", 0.3, true);
+jukebox_play(sndLoop1, "music", "loop", 1.0, true);
