@@ -8,8 +8,8 @@ var _gain     = argument1;
 var _trim     = argument2;
 var _priority = argument3;
 
-#macro __JUKEBOX_VERSION  "1.1.1"
-#macro __JUKEBOX_DATE     "2019/04/23"
+#macro __JUKEBOX_VERSION  "1.2.0"
+#macro __JUKEBOX_DATE     "2019/04/24"
 
 #macro __JUKEBOX_EXPECTED_FRAME_LENGTH  game_get_speed(gamespeed_microseconds)  //In microseconds
 #macro __JUKEBOX_DEFAULT_STEP_SIZE      (delta_time/__JUKEBOX_EXPECTED_FRAME_LENGTH)
